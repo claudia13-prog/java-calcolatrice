@@ -56,5 +56,21 @@ public class CalcoliHelper {
         return Math.max(a, b);
     }
 
+    //bonus
+    public static double elevamentoPotenza(int a, int b){
+        if(b == 0){
+            return 1;
+        }else if (b < 0) {
+            return 1 / elevamentoPotenza(a, -b); 
+        } else{
+            int risultato = 1;
+            for(int i = 0; i < b; i++){
+                risultato *= a;
+            }
+
+            return risultato;
+        }
+    }
+
 
 }
